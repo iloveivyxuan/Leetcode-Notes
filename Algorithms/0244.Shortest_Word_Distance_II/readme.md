@@ -1,4 +1,9 @@
-## 244. Shortest Word Distance II
+## 244. Shortest Word Distance II (Medium)
+
+### Link：
+题目：https://leetcode.com/problems/shortest-word-distance-ii/
+
+### Intuition
 
 Beacuase question said "Your method will be called repeatedly many times with different parameters."
 
