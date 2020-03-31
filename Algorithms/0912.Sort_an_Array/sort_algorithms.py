@@ -1,3 +1,5 @@
+import heapq
+
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         # self.insertion_sort(nums)
@@ -44,5 +46,41 @@ class Solution:
                 nums[k] = right_nums[j]
                 j += 1
                 k += 1
+
+        return nums
+
+    #heap_sort by using heapq library
+    def heap_sort_lib(self, nums):
+        res = []
+        heapq.heapify(nums)
+
+        for i in range(len(nums)):
+            res.append(heapq.heappop(nums))
+        return res
+
+    def heap_sort(self, nums):
+
+        def heapify(nums, n, i):
+            largest = i
+            left = i * 2 + 1
+            right = i * 2 + 2
+
+            if left < n and nums[largest] < nums[left]:
+                largest = left
+            if right < n and nums[largest] < nums[right]:
+                largest = right
+            if largest != i:
+                nums[i], nums[largest] = nums[largest], nums[i]
+                heapify(nums, n, largest)
+
+        # Build max_heap
+        n = len(nums)
+        for i in range(n//2, -1, -1):
+            heapify(nums, n, i)
+
+        # sort array in ascending order
+        for i in range(n-1, 0, -1):
+            nums[0], nums[i] = nums[i], nums[0]
+            heapify(nums, i, 0)
 
         return nums
