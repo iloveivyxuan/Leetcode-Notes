@@ -5,6 +5,7 @@
 | ----- | ----- |
 |  `if !obj` | `if not obj`|
 | `nil` | `None`|
+| `false` | `False`|
 
 
 Create a hash table with default value
