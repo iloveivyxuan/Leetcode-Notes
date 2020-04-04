@@ -1,11 +1,13 @@
 # Leetcode-Notes
 
 ## Python grammar
-| Ruby | Python |
-| ----- | ----- |
-|  `if !obj` | `if not obj`|
-| `nil` | `None`|
-| `false` | `False`|
+|Operation| Ruby | Python |
+| ----- | ----- | ----- |
+| |  `if !obj` | `if not obj`|
+| | `nil` | `None`|
+| | `false` | `False`|
+| Ternary Operator | `a ? b : c` | b if a else c|
+| | dp = [] | dp = [0] * len(nums) |
 
 
 Create a hash table with default value
